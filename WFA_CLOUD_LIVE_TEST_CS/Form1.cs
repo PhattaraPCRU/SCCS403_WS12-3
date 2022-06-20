@@ -19,7 +19,7 @@ namespace WFA_CLOUD_LIVE_TEST_CS
 
         private void BtnOK_Click(object sender, EventArgs e)
         {
-            double v = validate();
+            byte v = validate();
             if (v == 0)
             {
                 MessageBox.Show("เลือกรายการไอเหี้ย!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -29,9 +29,9 @@ namespace WFA_CLOUD_LIVE_TEST_CS
                 MessageBox.Show(v.ToString(), "ยอดชำระ", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-        private double validate()
+        private byte validate()
         {
-            int cost=0;
+            byte cost=0;
             if (chk1.Checked) { cost += 35; }
             if (chk2.Checked) { cost += 25; }
             if (chk3.Checked) { cost += 15; }
